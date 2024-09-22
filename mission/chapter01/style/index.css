@@ -16,7 +16,8 @@ h1{
 .TodoList__input{
   margin: 16px auto; 
   /* 부모의 display flex일 때만 auto가 기대한 대로 작동 */
-  width: 540px;
+  width: 54%;
+  min-width: 700px;
   height: 48px;
   border-radius: 4px;
   padding-left: 16px;
@@ -27,7 +28,8 @@ h1{
 }
 .TodoList__container{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 160px;
   padding: 0 16px;
   font-size: large;
   font-weight: 600;
@@ -40,6 +42,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 320px;
 }
 
 .TodoList__content{
@@ -48,5 +51,5 @@ h1{
   padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
-  
+
 }
