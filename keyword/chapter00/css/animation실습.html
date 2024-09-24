@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .ball{
+                position: relative;
+                width: 100px;
+                height: 100px;
+                top: 0px;
+                background-color: purple;
+                border-radius: 100%;
+                animation: fall 1s ease-in infinite alternate;
+            }
+            @keyframes fall {
+                0%{
+                    top:0px;
+                }
+                95%{
+                    width: 115px;
+                }
+                100%{
+                    top:300px;
+                }
+            }
+        </style>
+    </head>
+    <div class="ball"></div>
+        
+</html>
