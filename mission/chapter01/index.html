@@ -11,17 +11,17 @@
   <body>
     <h1>UMC Study Plan</h1>
     <main class="TodoList">
-      <input
-        type="text"
-        class="TodoList__input"
-        placeholder="스터디 계획을 작성해보세요!"
-      />
+      <form onsubmit="todoListSubmitEvent(event)" class="TodoList__form">
+        <input
+          type="text"
+          class="TodoList__input"
+          id="todoListInput"
+          placeholder="스터디 계획을 작성해보세요!"
+        />
+      </form>
       <div class="TodoList__container">
         <div class="TodoList__list" id="todo">
           <h3 class="TodoList__category">해야 할 일</h3>
-          <div class="TodoList__content"><p>temp list</p>
-          <input type="button" value="완료" class="TodoList__btn">
-          </div>
         </div>
 
         <div class="TodoList__list" id="done">
@@ -29,5 +29,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

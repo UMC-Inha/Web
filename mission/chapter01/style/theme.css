@@ -5,3 +5,7 @@
   --color-gray: #d5e0ed;
   --color-btnColor: #cfdbed;
 }
+
+.none{
+  display: none;
+}

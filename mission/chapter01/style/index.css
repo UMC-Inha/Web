@@ -43,6 +43,7 @@ h1{
   flex-direction: column;
   align-items: center;
   width: 320px;
+  gap: 8px;
 }
 
 .TodoList__content{
@@ -52,4 +53,8 @@ h1{
   display: flex;
   justify-content: space-between;
 
+}
+.TodoList__form{
+  display: flex;
+  justify-content: center;
 }
