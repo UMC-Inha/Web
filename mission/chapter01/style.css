@@ -1,0 +1,79 @@
+:root{
+    --primary-color: #A9BCF5;
+}
+
+body{
+    background-color: rgb(210, 247, 247);
+    margin:0;
+}
+
+.container{
+    margin:0 5rem;
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid gray;
+    width:100%;
+}
+
+.study-dashboard-container{
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+
+.input{
+    height:32px;
+    margin: 1rem 4rem; 
+}
+
+input:focus {
+    outline:3px solid var(--primary-color);
+}
+
+.list-container{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-title{
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: .5rem;
+}
+
+.todo-container{
+    flex:1;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.content-list-container{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    width:100%;
+}
+
+.content-box{
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 1px solid var(--primary-color);
+    margin: .5rem 4rem;
+}
+
+.content-button{
+    background-color: var(--primary-color);
+    margin: .5rem 1rem;
+    border: none;
+    padding: .5rem 1rem;
+}
