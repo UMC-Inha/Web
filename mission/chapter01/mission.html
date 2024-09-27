@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+            }
+            .section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .article{
+                display: flex;
+                flex-direction: row;
+            }
+            .input-wrapper{
+                width: 800px;
+                height: 40px;
+            }
+            .input{
+                width: 100%;
+                height: 100%;
+            }
+            .List{
+                margin-top: 20px;
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: bold;
+                
+            }
+            .title{
+                height: 80px;
+            }
+            .category{
+                border-bottom: 1px solid rgb(161, 161, 250);
+            }  
+            .item{
+                height: 40px;
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgb(161, 161, 250);
+                margin-top: 10px;
+            }
+            .btn{
+                margin : 5px 8px 8px 8px;
+                font-size: x-small;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>
+                UMC Study Plan
+            </h1>
+        </header>
+        <section class="section">
+            <div class="input-wrapper">
+                <input  id = "input" class="input" type="text" placeholder="스터디 계획을 작성해보세요!">
+            </div>
+            <article class="article">
+                <div class="List">
+                    <div class="title">
+                        <span class="category">해야 할 일</span>
+                    </div> 
+                    <div class="ToDoList"></div>
+                </div>
+                <div class="List">
+                    <div class="title">
+                        <span class="category">해낸 일</span>
+                    </div>
+                    <div class="DoneList"></div>
+                </div>
+            </article>
+            
+        </section>
+    
+    </body>
+    
+    <script>
+        var toDoList = document.getElementsByClassName("ToDoList");
+        var doneList = document.getElementsByClassName("DoneList");
+        var input = document.getElementById('input');
+        //input에 입력후 enter 치는 경우
+        input.addEventListener('keydown',function(event){
+                if (event.key === 'Enter'){
+                    let newDiv = document.createElement("div");
+                    let newSpan = document.createElement("span");
+                    let newBtn = document.createElement("button");
+                    newDiv.setAttribute('class', 'item');
+                    newBtn.setAttribute('class', 'btn');
+                    newBtn.setAttribute('id', 'complete');
+
+                    newSpan.innerHTML = input.value;
+                    newBtn.innerHTML = "완료";
+
+                    newDiv.appendChild(newSpan);
+                    newDiv.appendChild(newBtn);
+
+                    //완료 버튼 누르는 경우
+                    newBtn.addEventListener("click", function(){
+                        var clone = newDiv.cloneNode(true);
+                        clone.removeChild(clone.lastChild);
+                        var deleteBtn = document.createElement("button");
+                        deleteBtn.setAttribute("class", "btn");
+                        deleteBtn.innerHTML = "삭제";
+                        clone.appendChild(deleteBtn);
+
+                        //삭제버트 누르는 경우
+                        deleteBtn.addEventListener("click", function(){
+                            doneList[0].removeChild(clone);
+                            }
+                        )
+                        doneList[0].appendChild(clone);
+                        toDoList[0].removeChild(newDiv);
+                    })
+                    toDoList[0].appendChild(newDiv);
+
+                    input.value = null;
+                }
+            }
+        )
+        //완료 버튼 누르는 경우
+        //삭제 버튼 누르는 경우
+
+
+        
+    </script>
+</html>
