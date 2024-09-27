@@ -2,13 +2,16 @@ const todoListSubmitEvent = (event) => {
   // 새로고침 방지
   event.preventDefault();
   // 태그 가져오기
-  const todoList = document.getElementById("todo");
   const todoListinput = document.getElementById("todoListInput");
+  const todoListInputValue = todoListinput.value;
+  // 입력 예외처리
+  if(!todoListInputValue) return;
+  const todoList = document.getElementById("todo");
   // append할 태그 만들기
   const contentDiv = document.createElement("div");
   contentDiv.className = "TodoList__content";
   const p = document.createElement("p");
-  p.innerHTML = todoListinput.value;
+  p.innerHTML = todoListInputValue;
   todoListinput.value = "";
   const button = document.createElement("input");
   button.setAttribute("type", "button");
