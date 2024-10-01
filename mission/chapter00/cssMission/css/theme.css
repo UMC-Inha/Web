@@ -1,0 +1,11 @@
+:root{
+  --color-bgColor: #ECF0F6;
+  --color-blue: #0154c5;
+  --color-lightBlue: #bddbff;
+  --color-gray: #d5e0ed;
+  --color-btnColor: #cfdbed;
+}
+
+.none{
+  display: none;
+}

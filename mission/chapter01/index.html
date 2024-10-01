@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/theme.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <h1>UMC Study Plan</h1>
+    <main class="TodoList">
+      <form onsubmit="todoListSubmitEvent(event)" class="TodoList__form">
+        <input
+          type="text"
+          class="TodoList__input"
+          id="todoListInput"
+          placeholder="스터디 계획을 작성해보세요!"
+        />
+      </form>
+      <div class="TodoList__container">
+        <div class="TodoList__list" id="todo">
+          <h3 class="TodoList__category">해야 할 일</h3>
+        </div>
+
+        <div class="TodoList__list" id="done">
+          <h3 class="TodoList__category">해낸 일</h3>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

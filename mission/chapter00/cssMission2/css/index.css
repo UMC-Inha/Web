@@ -1,0 +1,71 @@
+
+*{
+  font-size: larger;
+  font-weight: 400;
+}.container {
+  display: flex;
+}
+.HEADER {
+  background-color: var(--color-navy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 80px;
+  color: var(--color-white);
+}
+.MENU {
+  background-color: var(--color-customRed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 80px;
+  color: var(--color-white);
+}
+.HERO {
+  background-color: var(--color-lightBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: var(--color-white);
+}
+.MAIN {
+  background-color: var(--color-darkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  color: var(--color-white);
+}
+.IMAGE {
+  background-color: var(--color-lightGreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EXTRA {
+  background-color: var(--color-customGreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BANNER {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-banana);
+}
+.gridContainer{
+  width: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.endContainer{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
