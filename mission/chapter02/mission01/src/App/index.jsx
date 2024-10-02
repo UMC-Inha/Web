@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.css";
-import useTodoList from "./api/useTodoList.js";
+import "./style.css";
+import useTodoList from "./model/useTodoList.js";
 import TodoListBtns from "./ui/todoListBtns/index.jsx";
 function App() {
   const todoContentMainInput = React.useRef();
