@@ -1,0 +1,4 @@
+.todoList__content {
+  display: flex;
+  gap: 4px;
+}

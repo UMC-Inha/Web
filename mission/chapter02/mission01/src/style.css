@@ -2,3 +2,9 @@ p {
   margin: 0;
   padding: 0;
 }
+input{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-bottom: 1px black solid;
+}
