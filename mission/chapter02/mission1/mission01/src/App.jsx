@@ -1,6 +1,6 @@
 import './App.css'
 import CustomButton from './component/CustomButton';
-
+import CustomInput from './component/CustomInput';
 import { useState } from 'react';
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
   const handleSubmit = (e)=>{
     e.preventDefault();
   }
-
 
   //1.추가하기
   const addTodo = () => {
@@ -34,12 +33,8 @@ function App() {
   return (
      <>
       <form onSubmit={handleSubmit}>
-        <input
-         type='text'
-         value = {text}
-         onChange={(e)=>{setText(e.target.value);}}
-        />
-       <CustomButton text = "할 일 등록" func={addTodo}/>
+        <CustomInput typingText = {text} func = {setText}/>
+        <CustomButton text = "할 일 등록" func={()=>addTodo()}/>
       </form>
       <div>
         {todos.map((todo, _) => (
@@ -55,14 +50,14 @@ function App() {
           {todo.id === editingId && (
             <div key={todo.id} style={{display: 'flex', gap: '5px'}}> 
               <p>{todo.id}번</p>
-              <input defaultValue={todo.task} onChange={(e)=>{setEditText(e.target.value)}}/>
+              <CustomInput defaultValue={todo.task} func ={setEditText}/>
             </div>
           )}
           
-        <CustomButton text = "삭제하기" func={deleteTodo} id = {todo.id}/>
+        <CustomButton text = "삭제하기" func={()=>deleteTodo(todo.id)}/>
         {editingId === todo.id ?
-        (<CustomButton text = "수정 진행" func={updateTodo} id = {editingId} editText = {editText}/>)
-         : (<CustomButton text = "수정 진행" func={setEditingId} id = {todo.id}/>) }
+        (<CustomButton text = "수정 완료" func={()=>updateTodo(editingId,editText)}/>)
+         : (<CustomButton text = "수정 진행" func={()=>setEditingId(todo.id)}/>) }
         
       </div>
         ))
