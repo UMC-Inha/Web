@@ -1,8 +1,8 @@
-import MovieList from "./MovieListPage";
+import MovieListPage from "./MovieListPage";
 const Page = () => {
   return(
     <main>
-      <MovieList />
+      <MovieListPage />
     </main>
   )
 }

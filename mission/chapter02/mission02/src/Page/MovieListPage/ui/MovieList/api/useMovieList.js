@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 const MOVIE = {
   "dates": {
     "maximum": "2023-09-17",
@@ -401,7 +400,8 @@ const MOVIE = {
 }
 
 const useMovieList = () => {
-  const [movieList, setMovieList] = useState(MOVIE);
+  const [movieList, setMovieList] = React.useState(MOVIE);
+  // api fetch 추가될 예정
   return [movieList.results];
 }
 export default useMovieList;
