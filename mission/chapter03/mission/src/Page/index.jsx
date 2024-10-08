@@ -16,6 +16,7 @@ const Page = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/category" element={<CategoryPage />} />
+        {/* <Route path="*" element={} /> 에러 페이지 추가 예정 */}
       </Routes>
     </STYLE.Main>
   );
