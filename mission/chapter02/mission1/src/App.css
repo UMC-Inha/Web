@@ -1,0 +1,35 @@
+.app-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .todo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .todo-display, .todo-edit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
