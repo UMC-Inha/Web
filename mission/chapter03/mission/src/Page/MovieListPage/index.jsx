@@ -1,5 +1,4 @@
 import MovieList from "./ui/MovieList";
-import "./style.css";
 
 const MovieListPage = () => {
   return (

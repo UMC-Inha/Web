@@ -2,34 +2,47 @@ import styled from "styled-components";
 
 const STYLE = {
   Nav: styled.nav`
-    padding-top: 4px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 8px 32px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    height: 52px;
+    height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    background-color: ${({ theme }) => theme.midBlack};
+
   `,
   Logo: styled.img`
     width: 120px;
+    cursor: pointer;
   `,
   Container: styled.div`
     display: flex;
     gap: 4px;
   `,
-  SignIn: styled.div`
+  SignUp: styled.div`
     background-color: ${({ theme }) => theme.btnRed};
-    width: 64px;
+    width: 80px;
     height: 32px;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   `,
-  SignUp: styled.div``,
+  SignIn: styled.div`
+    width: 80px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  `,
 };
 
 export default STYLE;

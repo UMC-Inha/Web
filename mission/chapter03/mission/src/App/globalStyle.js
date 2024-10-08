@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle` 
+///////////////////////////////////////////////////////////////// reset
   ${reset}
   a{
       text-decoration: none;
@@ -9,10 +10,6 @@ const GlobalStyles = createGlobalStyle`
   }
   *{
       box-sizing: border-box;
-  }
-  header, main, aside{
-    background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.color};
   }
   input, textarea { 
     -moz-user-select: auto;
@@ -28,13 +25,23 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     
   }
-  button {
-    border: none;
-    background: none;
-    padding: 0;
-    cursor: pointer;
+  ///////////////////////////////////////////////////////////////// reset
+  ///////////////////////////////////////////////////////////////// custom style of project
+  *{
+    color: ${({ theme }) => theme.color}
   }
-  
+  html, body, .body{
+    height: 100%;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+  main{
+    flex-grow: 1;
+  }
+
+  ///////////////////////////////////////////////////////////////// custom style of project
 `;
 
 export default GlobalStyles;

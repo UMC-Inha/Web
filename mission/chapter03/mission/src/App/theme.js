@@ -1,9 +1,8 @@
-const lightTheme = {
-  background: "white",
-  color: "black",
+const defaultTheme = {
+  background: "#051220",
+  color: "white",
   btnRed: "red",
-  
-
+  midBlack: "#131517",
   btnColor: "white",
   btnHoverColor: "#E1BEA3"
 };
@@ -17,7 +16,7 @@ const darkTheme = {
 };
 
 const theme = {
-  lightTheme,
+  defaultTheme,
   darkTheme,
 };
 

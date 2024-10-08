@@ -7,11 +7,10 @@ import Navbar from "./ui/Navbar/index.jsx";
 import theme from "./theme.js";
 function App() {
   return (
-    <ThemeProvider theme={theme.lightTheme}>
-      <GlobalStyles/>
-
-      <Navbar/>
+    <ThemeProvider theme={theme.defaultTheme}>
+      <GlobalStyles />
       <BrowserRouter>
+        <Navbar />
         <Page />
       </BrowserRouter>
     </ThemeProvider>
