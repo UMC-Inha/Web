@@ -1213,5 +1213,3 @@ async/await vs then
 비동기 처리 방식에 있어서 callback hell을 벗어나기 위해 
 
 async await뿐 아니라 then 문법을 사용할 수도 있습니다.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f1912130-0409-4e90-a90f-6091ae253e73/8d77c5d5-1ecc-4c21-b101-af43e8a5fad9/image.png)
