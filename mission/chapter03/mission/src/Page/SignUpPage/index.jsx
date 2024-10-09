@@ -1,8 +1,8 @@
 const SignUpPage = ()=>{
   return (
-    <main>
+    <div>
       회원가입페이지
-    </main>
+    </div>
   )
 }
 

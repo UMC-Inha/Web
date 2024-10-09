@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const STYLE = {
   Aside: styled.aside`
-    width: 240px;
+    min-width: 240px;
     padding: 8px 0 0 16px;
     display: flex;
     flex-direction: column;

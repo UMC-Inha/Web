@@ -3,7 +3,7 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import SearchPage from "./SearchPage";
 import CategoryPage from "./CategoryPage";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import STYLE from "./style";
 import Sidebar from "./ui/Sidebar";
 const Page = () => {
@@ -11,7 +11,8 @@ const Page = () => {
     <STYLE.Main>
       <Sidebar />
       <Routes>
-        <Route path="/" element={<MovieListPage />} />
+        <Route path="/" element={<Navigate to="/movies/popular" />} />
+        <Route path="/movies/:category" element={<MovieListPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/search" element={<SearchPage />} />

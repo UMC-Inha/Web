@@ -1,8 +1,8 @@
 const SearchPage = ()=>{
   return (
-    <main>
+    <div>
       검색페이지
-    </main>
+    </div>
   )
 }
 

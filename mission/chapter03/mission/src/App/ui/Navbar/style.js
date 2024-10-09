@@ -8,13 +8,13 @@ const STYLE = {
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    min-height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
     background-color: ${({ theme }) => theme.midBlack};
-
+    z-index: 1;
   `,
   Logo: styled.img`
     width: 120px;
@@ -33,6 +33,9 @@ const STYLE = {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:hover{
+      background-color: ${({ theme }) => theme.btnHoverColor};
+    }
   `,
   SignIn: styled.div`
     width: 80px;
@@ -42,6 +45,9 @@ const STYLE = {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:hover{
+      background-color: ${({ theme }) => theme.btnHoverColor};
+    }
   `,
 };
 

@@ -1,7 +1,8 @@
 import STYLE from "./style";
 import { handleNavigation } from "../../../Shared/model/handleNavigate";
 import { useNavigate } from "react-router-dom";
-import asideTabIcon from "./assets/shorts.svg";
+import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { RiMovie2Line } from "react-icons/ri";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -12,16 +13,14 @@ const Sidebar = () => {
           handleNavigation(navigate, "search");
         }}
       >
-        <STYLE.AsideTabIcon src={asideTabIcon} />
-        찾기
+        <HiOutlineMagnifyingGlass /> 찾기
       </STYLE.AsideTab>
       <STYLE.AsideTab
         onClick={() => {
           handleNavigation(navigate, "category");
         }}
       >
-        <STYLE.AsideTabIcon src={asideTabIcon} />
-        영화
+        <RiMovie2Line /> 영화
       </STYLE.AsideTab>
     </STYLE.Aside>
   );
