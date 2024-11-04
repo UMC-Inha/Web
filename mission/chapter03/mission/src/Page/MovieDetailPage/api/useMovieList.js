@@ -6,10 +6,11 @@ const BASE_IMG_SIZE = "w500";
 
 const useMovieList = (category, page) => {
   const [movieList, setMovieList] = React.useState([]);
+
   React.useEffect(() => {
     const fetchMovie = async () => {
       const response = await fetch(
-        `${BASE_URL}/movie/${category}?language=ko-KR&page=${page}`,
+        `${BASE_URL}/account/${1}`,
         apiConfig("GET"),
       );
 
