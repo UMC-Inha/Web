@@ -1,0 +1,16 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px auto;
+  gap: 8px;
+}
+.inputArea{
+  display: flex;
+  gap: 16px;
+}
+.outputArea{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

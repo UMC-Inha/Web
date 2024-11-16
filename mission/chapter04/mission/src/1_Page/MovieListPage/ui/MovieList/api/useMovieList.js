@@ -13,16 +13,18 @@ const useMovieList = (category, page) => {
         "GET",
         `${BASE_URL}/movie/${category}?language=ko-KR&page=${page}`
       );
-      result.results.forEach(e => {
+      result.results.forEach((e) => {
         e.poster_path = `${BASE_IMG_URL}${BASE_IMG_SIZE}${e.poster_path}`;
       });
-
-      setMovieList((prevList) => [
-        ...prevList,
-        ...result.results
-      ]);
-
+      // if(page % 5 == 0){
+      //   window.scrollTo({ top: 0});
+      //   setMovieList(result.results);
+      // } else{
+      //   setMovieList((prevList) => [...prevList, ...result.results]);
+      // }
+      setMovieList((prevList) => [...prevList, ...result.results]);
       setLoading(false);
+      console.log(page, "page")
     };
 
     fetchMovie();

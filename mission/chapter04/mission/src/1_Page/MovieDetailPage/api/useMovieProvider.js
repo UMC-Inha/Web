@@ -28,4 +28,4 @@ const useMovieProvider = (id) => {
   }, [id]);
   return [movieProvider, loading];
 };
-export default useMovieProvider;
+export default useMovieProvider; 
