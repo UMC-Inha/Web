@@ -33,7 +33,7 @@ const SignUp = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/auth/register', {
+      const response = await axios.post('http://localhost:3000/auth/register', {  //env로 빼서 따로 보안관리하자.
         email: data.email,
         password: data.password,
         passwordCheck: data.passwordCheck, // 백엔드가 요구하는 이름으로 전송
