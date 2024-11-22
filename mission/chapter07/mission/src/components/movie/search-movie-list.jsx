@@ -2,7 +2,7 @@ import useCustomFetch from "../../hooks/useCustomFetch"
 import { Link,useSearchParams } from 'react-router-dom';
 import MoviePoster from '../moviePoster/moviePoster';
 import * as S from '../../pages/basicPages/searchPage/styled/searchPage.style'
-import MovieFrameList from "../Skeleton/movieFrameList";
+import MovieFrameList from "../movieFrame/movieFrameList";
 
 const SearchMovieList = ()=>{
     const [searchParams, setSearchParams] = useSearchParams({
